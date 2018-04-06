@@ -1,3 +1,8 @@
+<% if !user_signed_in? %>
+      <%= link_to "LOGIN", new_user_session_path %> |
+      <%= link_to "SIGNUP", new_user_registration_path %>
+<% end %>
+
 <p id="notice"><%= notice %></p>
 
 <h1>Links</h1>
