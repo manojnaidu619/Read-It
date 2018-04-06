@@ -10,11 +10,10 @@
 
   <body>
     <% if user_signed_in? %>
+      <%= link_to 'New Link', new_link_path %> |
       <%= link_to "EDIT ACCOUNT", edit_user_registration_path %> |
       <%= link_to "LOGOUT", destroy_user_session_path, method: :delete, data: {confirm: "Are you sure?"} %>
     <% end %>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
     <%= yield %>
   </body>
 </html>
