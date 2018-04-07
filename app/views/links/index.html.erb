@@ -1,32 +1,10 @@
-<% if !user_signed_in? %>
-      <%= link_to "LOGIN", new_user_session_path %> |
-      <%= link_to "SIGNUP", new_user_registration_path %>
-<% end %>
 
+   <!-- Items listing -->
+
+<div class="container">
 <p id="notice"><%= notice %></p>
-
-<h1>Links</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Url</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
     <% @links.each do |link| %>
-      <tr>
-        <td><%= link.title %></td>
-        <td><%= link.url %></td>
-        <td><%= link_to 'Show', link %></td>
-        <td><%= link_to 'Edit', edit_link_path(link) if user_signed_in? %></td>
-        <td><%= link_to 'Destroy', link, method: :delete, data: { confirm: 'Are you sure?' }  if user_signed_in?%></td>
-      </tr>
+        <h2><%= link_to link.title, link %></h2>
+        <h5>Created about <%= time_ago_in_words(link.created_at) %> ago by <%= link.user.email %></h5><hr>
     <% end %>
-  </tbody>
-</table>
-
-<br>
+</div>

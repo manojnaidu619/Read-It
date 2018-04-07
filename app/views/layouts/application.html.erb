@@ -6,14 +6,34 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   </head>
 
+    <!-- NAVBAR -->
+
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <%= link_to "ReadIt", root_path, class: "navbar-brand", id: "nav" %>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+        <% if !user_signed_in? %>
+        <li><%= link_to "LOGIN", new_user_session_path %></li>
+        <li><%= link_to "SIGNUP", new_user_registration_path %></li>
+        <% else %>
+        <li><%= link_to 'NEW LINK', new_link_path %></li>
+        <li><%= link_to "EDIT ACCOUNT", edit_user_registration_path %></li>
+        <li><%= link_to "LOGOUT", destroy_user_session_path, method: :delete %></li>
+        <% end %>
+      </ul>
+    </div>
+  </nav>
+
   <body>
-    <% if user_signed_in? %>
-      <%= link_to 'New Link', new_link_path %> |
-      <%= link_to "EDIT ACCOUNT", edit_user_registration_path %> |
-      <%= link_to "LOGOUT", destroy_user_session_path, method: :delete, data: {confirm: "Are you sure?"} %>
-    <% end %>
     <%= yield %>
   </body>
 </html>

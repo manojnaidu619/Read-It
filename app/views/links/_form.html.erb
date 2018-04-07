@@ -1,3 +1,4 @@
+<div class="container">
 <%= form_with(model: link, local: true) do |form| %>
   <% if link.errors.any? %>
     <div id="error_explanation">
@@ -10,18 +11,11 @@
       </ul>
     </div>
   <% end %>
+</div>
 
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title, id: :link_title %>
-  </div>
-
-  <div class="field">
-    <%= form.label :url %>
-    <%= form.text_field :url, id: :link_url %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+ <div class="container">
+     <%= form.text_field :title, id: :link_title, class:"form-control" ,placeholder: "Enter Title"%><br>
+     <%= form.text_field :url, id: :link_url, class:"form-control", placeholder: "Enter URL" %><br>
+     <%= form.submit %>
+ <% end %>
+ </div>
