@@ -5,6 +5,8 @@
 <p id="notice"><%= notice %></p>
     <% @links.each do |link| %>
         <h2><%= link_to link.title, link %></h2>
-        <h5>Created about <%= time_ago_in_words(link.created_at) %> ago by <%= link.user.email %></h5><hr>
+        <h5>Created about <%= time_ago_in_words(link.created_at) %> ago by <%= link.user.email %>
+           <%=  link_to '<i class="material-icons btn">thumb_up</i>'.html_safe , Like_link_path(link), method: :put  %> <%= link.get_upvotes.size %>
+           <%=  link_to '<i class="material-icons btn">thumb_down</i>'.html_safe, Dislike_link_path(link), method: :put %> <%= link.get_downvotes.size %></h5><hr>
     <% end %>
 </div>

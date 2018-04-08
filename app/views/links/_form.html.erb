@@ -14,8 +14,10 @@
 </div>
 
  <div class="container">
-     <%= form.text_field :title, id: :link_title, class:"form-control" ,placeholder: "Enter Title"%><br>
-     <%= form.text_field :url, id: :link_url, class:"form-control", placeholder: "Enter URL" %><br>
-     <%= form.submit %>
- <% end %>
+     <%= form_for @link do |f| %>
+       <%= f.text_field :title ,class:"form-control", placeholder:"Enter Title" %><br>
+       <%= f.text_field :url ,class:"form-control", placeholder: "Enter complete url(with protocol ' :http ')" %><br>
+       <%= f.submit class:"btn btn-primary" %>
+     <% end %>
+    <% end %>
  </div>
