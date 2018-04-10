@@ -74,6 +74,7 @@ class LinksController < ApplicationController
     redirect_to request.referrer
   end
 
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_link
