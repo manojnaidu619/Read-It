@@ -14,6 +14,17 @@
   <%= link_to "Delete", link_path, method: :delete , data: {confirm: "Are you sure?"}, class: "btn btn-danger" if user_signed_in? && current_user == @link.user %>
   <%=  link_to '<i class="material-icons btn">thumb_up</i>'.html_safe , Like_link_path(@link), method: :put  %> <%= @link.get_upvotes.size %>
   <%=  link_to '<i class="material-icons btn">thumb_down</i>'.html_safe, Dislike_link_path(@link), method: :put %> <%= @link.get_downvotes.size %><br><br>
-  <%= link_to 'Back', links_path, class: "btn btn-success" %>
+  <%= link_to 'Back', links_path, class: "btn btn-success" %><br><br>
+   <h3><%= pluralize(@link.comments.count, "comment") %></h3>  
+  <div id="comments">
+    <%= render :partial => @link.comments %>
+  </div>
+
+  <%= simple_form_for [@link, Comment.new] do |f| %>
+     <div class="field">
+       <%= f.text_area :body ,class: "form-control" %>
+     </div><br>
+     <%= f.submit "Add comment", class:"btn btn-primary" %>
+  <% end %>
 
 </div>
