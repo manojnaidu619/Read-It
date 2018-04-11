@@ -1,5 +1,4 @@
 class CreateComments < ActiveRecord::Migration[5.1]
-  drop_table :comments
   def change
     create_table :comments do |t|
       t.integer :link_id
