@@ -1,24 +1,25 @@
-# README
+# Read-it
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This website is a clone of Reddit
 
-Things you may want to cover:
+Things you may want to do before getting started:
 
-* Ruby version
+* clone this repo: https://github.com/manojnaidu619/Read-It.git
 
-* System dependencies
+* Or download the ZIP file
 
-* Configuration
+* cd to this folder in the Terminal
 
-* Database creation
+* Make sure to run below in the terminal
+  ```sh
+   rake db:migrate
+  ```
 
-* Database initialization
+* Start the rails server by typing below command in the terminal
+  ```sh
+   rails server
+  ```
 
-* How to run the test suite
+* Start messing around it!!
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Thank you , By [manojnaidu619](https://github.com/manojnaidu619)
