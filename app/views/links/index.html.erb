@@ -3,6 +3,11 @@
 
 <div class="container">
 <p id="notice"><%= notice %></p>
+ <% if @links.empty?  %>
+  <div class="container" align="center">
+    <h2>No Links to display right now, Try creating some!!!</h2>
+  </div>
+ <% end %>
     <% @links.each do |link| %>
         <h2><%= link_to link.title, link %></h2>
         <h5>Created about <%= time_ago_in_words(link.created_at) %> ago by <%= link.user.email %>
