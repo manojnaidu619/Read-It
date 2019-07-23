@@ -22,4 +22,6 @@ Things you may want to do before getting started:
 
 * Start messing around it!!
 
+![](./readit.gif)
+
 * Thank you , By [manojnaidu619](https://github.com/manojnaidu619)
