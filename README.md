@@ -1,4 +1,5 @@
-# Read-it
+# Read-it &nbsp; [![Generic badge](https://img.shields.io/badge/Visit-Website-0aad5c.svg)](https://readit619.herokuapp.com/)
+
 
 ![](./readit.gif)
 
@@ -19,8 +20,3 @@ Things you may want to do before getting started:
   ```sh
    rails server
   ```
-
-* Start messing around it!!
-
-
-* Thank you , By [manojnaidu619](https://github.com/manojnaidu619)
