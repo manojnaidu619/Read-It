@@ -1,4 +1,4 @@
-# Read-it &nbsp; [![Generic badge](https://img.shields.io/badge/Visit-Website-0aad5c.svg)](https://readit619.herokuapp.com/)
+# Read-it [![Website shields.io](https://img.shields.io/website-up-down-success-red/http/shields.io.svg)](https://readit619.herokuapp.com/) [![Generic badge](https://img.shields.io/badge/Visit-Website-0aad5c.svg)](https://readit619.herokuapp.com/)
 
 
 ![](./readit.gif)
